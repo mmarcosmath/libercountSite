@@ -1,4 +1,4 @@
 # libercountsite
 
 ### Tela Inicial
-<img src="LiberCount.svg"/>
+<img src="LiberCount.jpg"/>
