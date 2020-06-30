@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height,
+        // width: MediaQuery.of(context).size.width,
         color: Color(0xFFF3F3F3),
         child: SingleChildScrollView(
           child: Column(

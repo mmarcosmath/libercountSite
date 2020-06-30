@@ -13,6 +13,7 @@ class Export extends StatelessWidget {
         color: Color(0xFFBFCCDA),
       ),
       height: 35,
+      width: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

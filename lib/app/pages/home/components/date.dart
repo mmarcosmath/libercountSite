@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'export.dart';
 
 class Date extends StatelessWidget {
+  final double _height = 35;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +33,7 @@ class Date extends StatelessWidget {
                     ),
                   ),
                 ),
-                height: 35,
+                height: _height,
                 width: 35,
                 child: Icon(
                   Icons.keyboard_arrow_left,
@@ -43,7 +44,7 @@ class Date extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 50, right: 10),
                 color: Color(0xFFBFCCDA),
-                height: 35,
+                height: _height,
                 width: 200,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +74,7 @@ class Date extends StatelessWidget {
                     ),
                   ),
                 ),
-                height: 35,
+                height: _height,
                 width: 35,
                 child: Icon(
                   Icons.keyboard_arrow_right,

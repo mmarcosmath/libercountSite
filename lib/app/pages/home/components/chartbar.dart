@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'bar.dart';
+import 'info_chartbar.dart';
 
 class ChartBar extends StatelessWidget {
   final list = [
@@ -20,32 +21,37 @@ class ChartBar extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Color(0xFF030AAC),
                 border: Border.all(
                   color: Color(0xFFE1E1E1),
                 ),
               ),
-              height: 100,
+              height: 150,
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "1,000",
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                    FittedBox(
+                      child: Text(
+                        "1,000",
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
-                    Text(
-                      "Total",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w300,
+                    FittedBox(
+                      child: Text(
+                        "Total",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
+                        ),
                       ),
                     ),
                   ],
@@ -58,41 +64,10 @@ class ChartBar extends StatelessWidget {
                 (e) => Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Bar(percentage: (double.parse(e["value"])) / 1000),
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color(0xFFE1E1E1),
-                          ),
-                        ),
-                        height: 100,
-                        child: Padding(
-                          padding: EdgeInsets.all(20),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "${e["value"]}",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              Text(
-                                "${e["title"]}",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  color: Color(0xFF2B80FF),
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      InfoChartBar(info: e),
                     ],
                   ),
                 ),
