@@ -12,7 +12,6 @@ class InfoChartBar extends StatelessWidget {
           color: Color(0xFFE1E1E1),
         ),
       ),
-      width: MediaQuery.of(context).size.width * 0.2,
       height: 150,
       child: Padding(
         padding: EdgeInsets.all(10),
@@ -20,24 +19,22 @@ class InfoChartBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            FittedBox(
-              child: Text(
-                "${info["value"]}",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                ),
+            Text(
+              "${info["value"]}",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
               ),
+              overflow: TextOverflow.ellipsis,
             ),
-            FittedBox(
-              child: Text(
-                "${info["title"]}",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Color(0xFF2B80FF),
-                  fontWeight: FontWeight.w300,
-                ),
+            Text(
+              "${info["title"]}",
+              style: TextStyle(
+                fontSize: 15,
+                color: Color(0xFF2B80FF),
+                fontWeight: FontWeight.w300,
               ),
+              overflow: TextOverflow.fade,
             ),
           ],
         ),

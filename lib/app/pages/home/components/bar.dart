@@ -42,7 +42,7 @@ class _BarState extends State<Bar> {
       //   right: MediaQuery.of(context).size.width * 0.1,
       // ),
       // width: 10,
-      width: MediaQuery.of(context).size.width * 0.08,
+      width: 100,
       height: 400,
       child: FractionallySizedBox(
         widthFactor: 1,

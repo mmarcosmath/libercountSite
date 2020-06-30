@@ -9,8 +9,14 @@ class Footer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text("© LiberCount 2020"),
-          Text("Designed by: @mmarcosmath"),
+          Text(
+            "© LiberCount 2020",
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text(
+            "Designed by: @mmarcosmath",
+            overflow: TextOverflow.ellipsis,
+          ),
         ],
       ),
     );
