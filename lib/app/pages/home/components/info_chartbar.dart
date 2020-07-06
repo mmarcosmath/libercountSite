@@ -12,7 +12,7 @@ class InfoChartBar extends StatelessWidget {
           color: Color(0xFFE1E1E1),
         ),
       ),
-      height: 150,
+      height: 100,
       child: Padding(
         padding: EdgeInsets.all(10),
         child: Column(

@@ -6,11 +6,7 @@ class Date extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-        top: 10,
-        left: 30,
-        right: 30,
-      ),
+      margin: EdgeInsets.only(top: 10, left: 30, right: 30, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -41,15 +37,22 @@ class Date extends StatelessWidget {
                   size: 20,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.only(left: 50, right: 10),
+              AnimatedContainer(
+                duration: Duration(milliseconds: 500),
+                padding: EdgeInsets.only(left: 10, right: 10),
                 color: Color(0xFFBFCCDA),
                 height: _height,
-                width: 200,
+                width: MediaQuery.of(context).size.width < 600 ? 110 : 200,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("25/06/2020"),
+                    Expanded(
+                      child: Center(
+                        child: FittedBox(
+                          child: Text("25/06/2020"),
+                        ),
+                      ),
+                    ),
                     Icon(
                       Icons.keyboard_arrow_down,
                       color: Color(0xFF2B80FF),

@@ -6,8 +6,12 @@ class Footer extends StatelessWidget {
     return Container(
       height: 50,
       color: Color(0xFFDBDBDB),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      child: Wrap(
+        runAlignment: WrapAlignment.center,
+        // crossAxisAlignment: WrapCrossAlignment.center,
+        alignment: WrapAlignment.spaceAround,
+
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
             "© LiberCount 2020",

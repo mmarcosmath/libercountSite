@@ -29,7 +29,7 @@ class _BarState extends State<Bar> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       // padding: EdgeInsets.only(right: 100),
-      duration: Duration(milliseconds: 100),
+      duration: Duration(milliseconds: 300),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(5),
@@ -42,7 +42,7 @@ class _BarState extends State<Bar> {
       //   right: MediaQuery.of(context).size.width * 0.1,
       // ),
       // width: 10,
-      width: 100,
+      width: MediaQuery.of(context).size.width < 600 ? 50 : 100,
       height: 400,
       child: FractionallySizedBox(
         widthFactor: 1,
