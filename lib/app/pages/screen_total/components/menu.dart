@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'export.dart';
+import 'package:libercountsite/app/pages/components/export.dart';
+import 'package:libercountsite/app/pages/components/search.dart';
 
-class Date extends StatelessWidget {
-  final double _height = 35;
+class Menu extends StatelessWidget {
+  final double _height = 40;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,16 +49,12 @@ class Date extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Center(
-                        child: FittedBox(
-                          child: Text("25/06/2020"),
+                        child: Text(
+                          "Todos",
+                          style: TextStyle(fontSize: 20),
                         ),
                       ),
                     ),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Color(0xFF2B80FF),
-                      size: 20,
-                    )
                   ],
                 ),
               ),
@@ -87,6 +84,7 @@ class Date extends StatelessWidget {
               ),
             ],
           ),
+          Search(),
           Export(),
         ],
       ),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:libercountsite/app/pages/home/components/Date.dart';
-
+import 'components/date.dart';
 import 'components/chartbar.dart';
-import 'components/footer.dart';
-import 'components/header.dart';
+import '../components/footer.dart';
+import '../components/header.dart';
 
 class HomePage extends StatefulWidget {
   @override

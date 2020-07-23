@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 class Export extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
     return MediaQuery.of(context).size.width < 360
         ? Icon(Icons.more_vert)
         : Container(
@@ -17,12 +16,15 @@ class Export extends StatelessWidget {
               ),
               color: Color(0xFFBFCCDA),
             ),
-            height: 35,
-            width: 100,
+            height: 40,
+            width: 120,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Exportar"),
+                Text(
+                  "Exportar",
+                  style: TextStyle(fontSize: 20),
+                ),
                 Icon(
                   Icons.keyboard_arrow_down,
                   color: Color(0xFF2B80FF),

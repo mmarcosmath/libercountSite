@@ -20,7 +20,6 @@ class _BarState extends State<Bar> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     // animation();
   }
@@ -43,7 +42,7 @@ class _BarState extends State<Bar> {
       // ),
       // width: 10,
       width: MediaQuery.of(context).size.width < 600 ? 50 : 100,
-      height: 400,
+      height: _height,
       child: FractionallySizedBox(
         widthFactor: 1,
         heightFactor: widget.percentage,
